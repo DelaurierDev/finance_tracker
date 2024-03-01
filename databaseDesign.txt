@@ -1,0 +1,30 @@
+User:
+(int) user_id
+(string) password
+(string) username
+(datetime) created_at
+(datetime) updated_at
+
+Accounts (Many to one with user):
+(int) account_id
+(int) user_ids
+(string) account_name
+(boolean) isChecking
+(float) balance
+(datetime) created_at
+(datetime) updated_at
+
+Transactions (Many to one with accounts):
+(int) transaction_id
+(int) transaction_amount
+(int) user_to
+(int) user_from
+(datetime) created_at
+(datetime) updated_at
+
+Friends (Many to one with user):
+(int) relationship_id
+(int) users_id
+(int) friend_id
+(datetime) created_at
+(datetime) updated_at
