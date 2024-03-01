@@ -1,0 +1,18 @@
+TO DO LIST
+(0) Not started (1) In progress (2) Finished
+
+Create landing page (0)
+
+Create models for database (0)
+
+Create user and login functionality (0)
+
+Create dashboard and charts (0)
+
+Create account management functionality (0)
+
+Create friend and account transfer functionality (0)
+
+Create expense functionality (0)
+
+Create notification functionality (0)

@@ -28,3 +28,25 @@ Friends (Many to one with user):
 (int) friend_id
 (datetime) created_at
 (datetime) updated_at
+
+Friend Requests (Many to one with user):
+(int) request_id
+(int) recipient_id
+(int) sender_id
+(datetime) created_at
+(datetime) updated_at
+
+Notifications (Many to one with user):
+(int) noti_id
+(int) user_ids
+(string) Notifications
+(datetime) created_at
+(datetime) updated_at
+
+Expenses (Many to one with user):
+(int) expense_id
+(int) user_ids
+(float) amount
+(datetime) due_date
+(datetime) created_at
+(datetime) updated_at
