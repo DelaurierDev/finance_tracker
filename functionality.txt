@@ -5,7 +5,7 @@ Create database (0)
 
 Create landing page (0)
 
-Create models for database (0)
+Create models for database (1)
 
 Create user and login functionality (0)
 
@@ -18,3 +18,5 @@ Create friend and account transfer functionality (0)
 Create expense functionality (0)
 
 Create notification functionality (0)
+
+Style (0)
