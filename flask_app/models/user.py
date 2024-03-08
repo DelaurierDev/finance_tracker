@@ -7,6 +7,7 @@ mydb = "n/a"
 class User:
     def __init__(self, data):
         self.id = data['id']
+        self.email = data['email']
         self.username = data['username']
         self.password = data['password']
         self.created_at = data['created_at']
@@ -37,6 +38,9 @@ class User:
         if len(user['username']) <3:
             flash("Usename must be at least 3 characters.")
             is_valid = False
+        if not EMAIL_REGEX.match(user['email']): 
+            flash("Invalid email address!")
+            is_valid = False
         if len(user['password']) < 8:
             flash("Password must be 8 characters or greater.")
             is_valid = False
@@ -53,6 +57,20 @@ class User:
         FROM users
         WHERE username = %(username)s'''
 
+        result = connectToMySQL(mydb).query_db(query,data)
+
+        if len(result) < 1:
+            return False
+        return cls(result[0])
+    
+#This is a class method used to find a user by email in the database to login.
+    @classmethod
+    def get_by_email(cls, data):
+        query = '''
+        SELECT *
+        FROM users
+        WHERE email = %(email)s;
+        '''
         result = connectToMySQL(mydb).query_db(query,data)
 
         if len(result) < 1:
