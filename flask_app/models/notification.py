@@ -3,3 +3,9 @@ from flask import flash
 mydb = 'n/a'
 
 class Notification:
+    def __init__(self, data):
+        noti_id = data['noti_id']
+        user_id = data['user_id']
+        notification = data ['notification']
+        created_at = data['created_at']
+        updated_at = data['updated_at']
