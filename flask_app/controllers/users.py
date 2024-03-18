@@ -9,5 +9,9 @@ bcrypt = Bcrypt(app)
 
 #Render the landing page
 @app.route('/')
-def login_reg():
+def landing():
     return render_template('/index.html')
+
+@app.route('/signin')
+def login_reg():
+    return render_template('/signin.html')

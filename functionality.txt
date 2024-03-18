@@ -3,7 +3,7 @@ TO DO LIST
 
 Create database (0)
 
-Create landing page (0)
+Create landing page (2)
 
 Create models for database (1)
 
