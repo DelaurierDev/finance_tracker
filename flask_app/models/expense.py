@@ -1,6 +1,6 @@
 from flask_app.config.mysqlconnection import connectToMySQL
 from flask import flash
-mydb = 'n/a'
+mydb = 'finance_db'
 
 class Expense:
     def __init__(self, data):

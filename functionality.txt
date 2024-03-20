@@ -1,7 +1,7 @@
 TO DO LIST
 (0) Not started (1) In progress (2) Finished
 
-Create database (0)
+Create database (2)
 
 Create landing page (2)
 

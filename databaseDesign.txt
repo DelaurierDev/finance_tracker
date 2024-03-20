@@ -1,5 +1,6 @@
 User:
 (int) user_id
+(string) email
 (string) password
 (string) username
 (datetime) created_at
