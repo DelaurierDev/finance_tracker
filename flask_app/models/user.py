@@ -16,7 +16,7 @@ class User:
     #Creating a class method to save users into the database when they create a user
     @classmethod
     def save_user(cls,data):
-        query = 'INSERT INTO users (created_at, updated_at, password, username) VALUES (NOW(), NOW(),%(password)s,%(username)s);'
+        query = 'INSERT INTO users (created_at, updated_at, password, username, email) VALUES (NOW(), NOW(),%(password)s,%(username)s, %(email)s);'
         return connectToMySQL(mydb).query_db(query,data)
     
     #A method used to get a user by user id

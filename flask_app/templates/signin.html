@@ -8,27 +8,34 @@
 <body>
     <nav><h1><a href="/">Fund Focus</a></h1></nav>
     <section>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p class="error">{{message}}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
         <div>
             <h2>Sign in!</h2>
-            <form action="">
-                <label for="">email or username</label>
-                <input type="text">
-                <label for="">password</label>
-                <input type="password">
+            <form action="/login" method="POST">
+                <label for="emailOrUser">email or username:</label>
+                <input type="text" name="emailOrUser">
+                <label for="password">password:</label>
+                <input type="password" name="password">
                 <button>sign in</button>
             </form>
         </div>
         <div>
             <h2>Sign up!</h2>
-            <form action="">
-                <label for="">email</label>
-                <input type="text">
-                <label for="">username</label>
-                <input type="text">
-                <label for="">password</label>
-                <input type="password">
-                <label for="">confirm password</label>
-                <input type="password">
+            <form action="/signup" method="POST">
+                <label for="">email:</label>
+                <input type="text" name="email" placeholder="ex. abc123@email.com">
+                <label for="">username:</label>
+                <input type="text" name="username" placeholder="ex. John123">
+                <label for="">password:</label>
+                <input type="password" name="password" placeholder="ex. PasSWorD123">
+                <label for="">confirm password:</label>
+                <input type="password" name="confpassword" placeholder="ex. PasSWorD123">
                 <button>sign up</button>
             </form>
         </div>
