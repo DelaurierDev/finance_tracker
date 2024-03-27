@@ -7,7 +7,7 @@ Create landing page (2)
 
 Create models for database (1)
 
-Create user and login functionality (0)
+Create user and login functionality (1)
 
 Create dashboard and charts (0)
 

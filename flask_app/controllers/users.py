@@ -15,3 +15,7 @@ def landing():
 @app.route('/signin')
 def login_reg():
     return render_template('/signin.html')
+
+@app.route('/signup')
+def sign_up():
+    return 
