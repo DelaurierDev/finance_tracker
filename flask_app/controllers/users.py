@@ -18,4 +18,8 @@ def login_reg():
 
 @app.route('/signup')
 def sign_up():
-    return 
+    return redirect("/dashboard")
+
+@app.route('/login')
+def login():
+    return redirect("/dashboard")
